@@ -2,24 +2,16 @@
 #
 # 0. 乾之不动                            v
 # 1. 乾 & 乾不动                         v
-#
 # 2. 乾 坤 & 乾为天 坤为地                v
-#
 # 3. 乾之坤 & 天之地                     v
 # 4. 乾为天之坤为地 & 乾为天之坤          v
 # 5. 乾为天 之 坤 & 乾为天 之 地为坤      v
 #
 # (用strip：删除两端的空格)
 #
-# 乾
-# 天
-# 乾为天
-#
 # python 不能表达式赋值，就是不能在if()里赋值，这点感觉不错
-#
 # python 里没有switch，要用if-else和字典，还有其他方法实现
-# 这点我觉得不太好
-#
+# 
 #
 # 乾为1 坤为2， 输入 1之2 感觉不方便
 # 考虑用个符号代替之字， . 或者 -， 英文是点 中文是句号，不过减号中英相同
@@ -28,16 +20,19 @@
 # 这里还有个问题，如果是数字和中文混合输入，到时做出界面了在调试
 #
 # 'QIAN' 'Qian' 'qIan' 'qiAN' ben bian gua检查是不是字母，是则全转成小写
-# 之也用减号代替-，不然很麻烦
+# isalpha() 方法检测字符串是否只由字母组成，No space & digit in this string
+# lower() 方法转换字符串中所有大写字符为小写
+# 
+# 还有有一种算法，就是search函数，search 之，zhi，- 这三个关键字符
+# 关键字符之前是本卦，关键字符之后为变卦
+#
 
 __author__ = 'hanpeizhi'
 import re
 import lookup_dic
-
 # from lookup_dic import to_bi
 
-instr_gua =  '1- 2'
-
+instr_gua =  '1 之 2'
 (ben_gua, bian_gua) = ('', '')  # 可不申明
 (bin_ben_gua, bin_bian_gua) = ('', '')
 
@@ -56,7 +51,7 @@ def get_bin_benbian():
     bin_bian_gua = lookup_dic.to_bin(bian_gua)
 
 
-# 两个卦名必须全中文或者拼音
+# 两个卦名必须全中文 或者 拼音和数字
 # 目前只匹配阿拉伯数字和小写拼音 #'\s*([a-zA-Z0-9]+)\s*-*[Zz][h]*i*之*\s*([a-zA-Z0-9]*)\s*'
 # '1 - 2' or '1 - ' or '1' or '11 之 1' or 'qian Zi qian' or 'qian Zhi qian'
 match_str = re.match('\s*([a-zA-Z0-9]+)\s*[-之\s*]*\s*([a-zA-Z0-9]*)\s*', instr_gua)
