@@ -36,7 +36,7 @@ import lookup_dic
 
 # from lookup_dic import to_bi
 
-instr_gua =  '乾为天'
+instr_gua =  '1- 2'
 
 (ben_gua, bian_gua) = ('', '')  # 可不申明
 (bin_ben_gua, bin_bian_gua) = ('', '')
@@ -57,9 +57,9 @@ def get_bin_benbian():
 
 
 # 两个卦名必须全中文或者拼音
-# 目前只匹配阿拉伯数字和小写拼音
+# 目前只匹配阿拉伯数字和小写拼音 #'\s*([a-zA-Z0-9]+)\s*-*[Zz][h]*i*之*\s*([a-zA-Z0-9]*)\s*'
 # '1 - 2' or '1 - ' or '1' or '11 之 1' or 'qian Zi qian' or 'qian Zhi qian'
-match_str = re.match('\s*([a-zA-Z0-9]+)\s*-*[Zz][h]*i*之*\s*([a-zA-Z0-9]*)\s*', instr_gua)
+match_str = re.match('\s*([a-zA-Z0-9]+)\s*[-之\s*]*\s*([a-zA-Z0-9]*)\s*', instr_gua)
 if match_str:
     get_benbian_gua()
     get_bin_benbian()

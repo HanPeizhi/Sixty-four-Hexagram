@@ -197,7 +197,7 @@ def to_bin(in＿name):  # in_name 不能同时是全局变量和函数元素
         out_binary = '101101'
         return out_binary
 
-    elif in＿name == '' or in_name == '不动':
+    elif in＿name == '' or in_name == '不动' or in_name == '0':
         out_binary = ''
         return out_binary
     else:
