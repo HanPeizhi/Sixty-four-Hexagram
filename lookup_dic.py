@@ -11,9 +11,9 @@
 
 __author__ = 'hanpeizhi'
 
-#in＿name = ''
-#out_binary = ''
-#global out_binary
+# in＿name = ''
+# out_binary = ''
+# global out_binary
 
 
 def to_bin(in＿name):  # in_name 不能同时是全局变量和函数元素
@@ -80,7 +80,7 @@ def to_bin(in＿name):  # in_name 不能同时是全局变量和函数元素
             or in＿name == 'bi' \
             or in＿name == '水地' or in＿name == 'shuidi' or in＿name == 'suidi' \
             or in＿name == '坎坤' or in＿name == 'kankun' \
-            or in＿name == '010000':  # 8
+            or in＿name == '010000' or in＿name == '8':  # 8
         out_binary = '010000'
         return out_binary
 
@@ -88,7 +88,7 @@ def to_bin(in＿name):  # in_name 不能同时是全局变量和函数元素
             or in＿name == 'xiaochu' or in＿name == 'xiaocu'\
             or in＿name == '风天' or in＿name == 'fengtian' or in＿name == 'fentian' \
             or in＿name == '巽乾' or in＿name == 'xunqian' \
-            or in＿name == '110111':  # 9
+            or in＿name == '110111' or in＿name == '9':  # 9
         out_binary = '110111'
         return out_binary
 
@@ -96,7 +96,7 @@ def to_bin(in＿name):  # in_name 不能同时是全局变量和函数元素
             or in＿name == 'lv0' \
             or in＿name == '天泽' or in＿name == 'tianze' or in＿name == 'tianzhe' \
             or in＿name == '乾兑' or in＿name == 'qiandui' \
-            or in＿name == '111011':  # 10
+            or in＿name == '111011' or in＿name == '10':  # 10
         out_binary = '111011'
         return out_binary
 
@@ -104,7 +104,7 @@ def to_bin(in＿name):  # in_name 不能同时是全局变量和函数元素
             or in＿name == 'tai' \
             or in＿name == '地天' or in＿name == 'ditian' \
             or in＿name == '坤乾' or in＿name == 'kunqian' \
-            or in＿name == '000111':  # 11
+            or in＿name == '000111' or in＿name == '11':  # 11
         out_binary = '000111'
         return out_binary
 
@@ -112,7 +112,7 @@ def to_bin(in＿name):  # in_name 不能同时是全局变量和函数元素
             or in＿name == 'pi' or in＿name == 'fou' \
             or in＿name == '天地' or in＿name == 'tiandi' \
             or in＿name == '乾坤' or in＿name == 'qiankun' \
-            or in＿name == '111000':  # 12
+            or in＿name == '111000' or in＿name == '12':  # 12
         out_binary = '111000'
         return out_binary
 
@@ -120,7 +120,7 @@ def to_bin(in＿name):  # in_name 不能同时是全局变量和函数元素
             or in＿name == 'tongren' or in＿name == 'tonren' \
             or in＿name == '天火' or in＿name == 'tianhuo' \
             or in＿name == '乾离' or in＿name == 'qianli' \
-            or in＿name == '111101':  # 13
+            or in＿name == '111101' or in＿name == '13':  # 13
         out_binary = '111101'
         return out_binary
 
@@ -128,7 +128,7 @@ def to_bin(in＿name):  # in_name 不能同时是全局变量和函数元素
             or in＿name == 'dayou' \
             or in＿name == '火天' or in＿name == 'huotian' \
             or in＿name == '离乾' or in＿name == 'liqian' \
-            or in＿name == '101111':  # 14
+            or in＿name == '101111' or in＿name == '14':  # 14
         out_binary = '101111'
         return out_binary
 
@@ -136,7 +136,7 @@ def to_bin(in＿name):  # in_name 不能同时是全局变量和函数元素
             or in＿name == 'qian' \
             or in＿name == '地山' or in＿name == 'dishan' or in＿name == 'disan' \
             or in＿name == '坤艮' or in＿name == 'kungen' or in＿name == 'kungeng' \
-            or in＿name == '000100':  # 15
+            or in＿name == '000100' or in＿name == '15':  # 15
         out_binary = '000100'
         return out_binary
 
