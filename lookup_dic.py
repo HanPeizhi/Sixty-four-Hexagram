@@ -207,4 +207,4 @@ def to_bin(in＿name):  # in_name 不能同时是全局变量和函数元素
         return "不要调皮！"
 
 # lookup_dic(in＿name)
-#print(out_binary, in＿name)
+# print(out_binary, in＿name)

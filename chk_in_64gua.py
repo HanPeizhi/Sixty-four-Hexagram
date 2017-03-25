@@ -87,12 +87,22 @@ def get_liuyao():
         x += 1
 
 
+def set_dongyao():
+    for i in range(6):
+        if bin_ben_gua[i] == '0' and bin_bian_gua[i] == '1':
+            matrix[i][6] = ' X'
+            matrix[i][7] = '→ '
+        elif bin_ben_gua[i] == '1' and bin_bian_gua[i] == '0':
+            matrix[i][6] = ' 0'
+            matrix[i][7] = '→ '
+
+
 def print_liuyao():
     for x in range(5):
         print('\n')
         for y in range(13):
-             print(matrix[x][y], end = '')
-    
+            print(matrix[x][y], end='')
+
 
 # 两个卦名必须全中文 或者 拼音和数字
 # 目前只匹配阿拉伯数字和小写拼音 #'\s*([a-zA-Z0-9]+)\s*-*[Zz][h]*i*之*\s*([a-zA-Z0-9]*)\s*'
@@ -116,6 +126,7 @@ print('本卦:', ben_gua)
 print('变卦:', bian_gua)
 print(bin_ben_gua, bin_bian_gua)
 get_liuyao()
+set_dongyao()
 print_liuyao()
 instr_gua = input('')
 
