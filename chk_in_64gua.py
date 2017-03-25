@@ -23,6 +23,8 @@
 # 还有有一种算法，就是search函数，search 之，zhi，- 这三个关键字符, 比如 qianzhiqian
 # 关键字符之前是本卦，关键字符之后为变卦
 #
+#  ▅▅▅▅▅
+#  ▅▅　▅▅
 
 __author__ = 'hanpeizhi'
 import re
