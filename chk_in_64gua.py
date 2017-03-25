@@ -70,8 +70,7 @@ else:
         match_str = re.match('\s*(.+)\s*不动\s*(.*)\s*', instr_gua)  # if match_str:
         get_benbian_gua()
         get_bin_benbian()
-    else:
-        # '乾之不动' or ' 乾 之 不动 ' or '乾 坤'  or '乾为天' or '乾为天之不动'  or '乾为天 之 不动' 
+    else:   #' 乾 - 不动 ' or '乾之不动' or ' 乾 之 不动 ' or '乾 坤'  or '乾为天' or '乾为天之不动'  or '乾为天 之 不动' 
         match_str = re.match('\s*([\u4e00-\u9fa5]+)\s*[-之\s*]\s*([\u4e00-\u9fa5]*)\s*', instr_gua)
         if match_str:
             get_benbian_gua()
