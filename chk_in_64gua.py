@@ -36,18 +36,18 @@ import lookup_dic
 
 # from lookup_dic import to_bi
 
-instr_gua = '1 之 2 '
+instr_gua =  'qian Zi qian'
 
 (ben_gua, bian_gua) = ('', '')  # 可不申明
 (bin_ben_gua, bin_bian_gua) = ('', '')
 
-instr_gua = instr_gua.strip()  # 检测前删除两端的空格
+#instr_gua = instr_gua.strip()  # 检测前删除两端的空格
 
 
 def get_benbian_gua():
     global ben_gua, bian_gua
-    ben_gua = match_str.group(1).rstrip()
-    bian_gua = match_str.group(2).lstrip()
+    ben_gua = match_str.group(1)  #.rstrip()
+    bian_gua = match_str.group(2)  #.lstrip()
 
 
 def get_bin_benbian():
@@ -56,7 +56,31 @@ def get_bin_benbian():
     bin_bian_gua = lookup_dic.to_bin(bian_gua)
 
 
-match_str = re.match('(.*)之(.*)', instr_gua)       # '乾之坤'
+
+
+# 两个卦名必须全中文或者拼音
+# 目前只匹配阿拉伯数字和小写拼音
+# '1 - 2' or '1 - ' or '1' or '11 之 1' or 'qian Zi qian' or 'qian Zhi qian'
+match_str = re.match('\s*([a-zA-Z0-9]+)\s*-*[Zz][h]*i*之*\s*([a-zA-Z0-9]*)\s*', instr_gua)
+if match_str:
+    get_benbian_gua()
+    get_bin_benbian()
+else:   
+    if re.search('不动', instr_gua) and not re.search('之', instr_gua) and not re.search('-', instr_gua):  # '乾不动'
+        match_str = re.match('\s*(.+)\s*不动\s*(.*)\s*', instr_gua)  # if match_str:
+        get_benbian_gua()
+        get_bin_benbian()
+    else:
+        # '乾之不动' or ' 乾 之 不动 ' or '乾 坤'  or '乾为天' or '乾为天之不动'  or '乾为天 之 不动' 
+        match_str = re.match('\s*([\u4e00-\u9fa5]+)\s*[-之\s*]\s*([\u4e00-\u9fa5]*)\s*', instr_gua)
+        if match_str:
+            print("!!!")
+            get_benbian_gua()
+            get_bin_benbian()
+
+
+    '''
+match_str = re.match('\s*(.+)\s*之*\s*(.*)\s*', instr_gua)       # '乾之坤'
 
 if match_str:
     get_benbian_gua()
@@ -64,12 +88,7 @@ if match_str:
     if ben_gua == bian_gua or bian_gua == '不动':   # '乾之不动'
         bian_gua = ''
         get_bin_benbian()
-else:                                               # 1 - 2 or 1 -
-    match_str = re.match('\s*(\d+)\s*-*\s*(\d*)\s*', instr_gua)
-    if match_str:
-        get_benbian_gua()
-        get_bin_benbian()
-    '''
+else:  
     match_str = re.match('(.*)\s+(.*)', instr_gua)  # '乾 坤'
     if match_str:
         get_benbian_gua()
