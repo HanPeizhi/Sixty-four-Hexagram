@@ -36,7 +36,7 @@ import lookup_dic
 
 # from lookup_dic import to_bi
 
-instr_gua =  'qian Zi qian'
+instr_gua =  ' 乾 - 不动 '
 
 (ben_gua, bian_gua) = ('', '')  # 可不申明
 (bin_ben_gua, bin_bian_gua) = ('', '')
