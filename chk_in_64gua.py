@@ -36,7 +36,7 @@ import lookup_dic
 
 # from lookup_dic import to_bi
 
-instr_gua =  '乾为天之'
+instr_gua =  '乾为天'
 
 (ben_gua, bian_gua) = ('', '')  # 可不申明
 (bin_ben_gua, bin_bian_gua) = ('', '')
@@ -68,6 +68,10 @@ else:
     if match_str:
         get_benbian_gua()
         get_bin_benbian()
+    else:  # '乾'
+        ben_gua = instr_gua
+        get_bin_benbian()
+        print('to check the dic')  # 如果字典里查不到就是输入错误
 
 '''
 if re.search('不动', instr_gua) and not re.search('之', instr_gua) and not re.search('-', instr_gua):  # '乾不动'
