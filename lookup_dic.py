@@ -43,28 +43,28 @@ def to_bin(in＿name):  # in_name 不能同时是全局变量和函数元素
         out_binary = '010001'
         return out_binary
 
-    elif in＿name == '蒙' or in＿name == '山水' or in＿name == '山水蒙' \
-            or in＿name == '100010' or in＿name == '艮坎' \
+    elif in＿name == '蒙'  or in＿name == '山水蒙' \
             or in＿name == 'meng' or in＿name == 'men' \
-            or in＿name == 'genkan' or in＿name == 'gengkan' \
-            or in＿name == 'shanshui' or in＿name == 'sansui' \
-            or in＿name == 'shansui' or in＿name == 'sanshui':  # 4
+            or in＿name == '山水' or in＿name == 'shanshui' or in＿name == 'sansui' \
+            or in＿name == 'shansui' or in＿name == 'sanshui'\
+            or in＿name == '艮坎' or in＿name == 'genkan' or in＿name == 'gengkan' \
+            or in＿name == '100010':
         out_binary = '100010'
         return out_binary
 
-    elif in＿name == '需' or in＿name == '水天需' or in＿name == '水天' \
-            or in＿name == '010111'or in＿name == '坎乾'\
+    elif in＿name == '需' or in＿name == '水天需'\
             or in＿name == 'xu'\
-            or in＿name == 'kanqian'\
-            or in＿name == 'shuitian' or in＿name == 'suitian':  # 5
+            or in＿name == '水天' or in＿name == 'shuitian' or in＿name == 'suitian'\
+            or in＿name == '坎乾' or in＿name == 'kanqian'\
+            or in＿name == '010111':  # 5
         out_binary = '010111'
         return out_binary
 
-    elif in＿name == '讼' or in＿name == '天水讼' or in＿name == '天水'\
-            or in＿name == '111010' or in＿name == '乾坎'\
+    elif in＿name == '讼' or in＿name == '天水讼' \
             or in＿name == 'song' or in＿name == 'son' or in＿name == 'shon'or in＿name == 'shong' \
-            or in＿name == 'qiankan' \
-            or in＿name == 'tianshui' or in＿name == 'tiansui':  # 6
+            or in＿name == '天水' or in＿name == 'tianshui' or in＿name == 'tiansui'\
+            or in＿name == '乾坎' or in＿name == 'qiankan' \
+            or in＿name == '111010': # 6
         out_binary = '111010'
         return out_binary
 
