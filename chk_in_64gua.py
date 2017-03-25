@@ -29,7 +29,7 @@ import re
 import lookup_dic
 # from lookup_dic import to_bi
 
-instr_gua = 'QIAN-QIAN'
+instr_gua = input('输入卦名：')
 (ben_gua, bian_gua) = ('', '')  # 可不申明
 (bin_ben_gua, bin_bian_gua) = ('', '')
 
@@ -72,6 +72,7 @@ print('本卦:', ben_gua)
 print('变卦:', bian_gua)
 print(bin_ben_gua, bin_bian_gua)
 
+instr_gua = input('')
 
 '''
 if re.search('不动', instr_gua) and not re.search('之', instr_gua)\
