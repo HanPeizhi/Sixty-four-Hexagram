@@ -19,9 +19,6 @@
 # 从软件界面输入得到的是数字，还得转换成字符
 # 这里还有个问题，如果是数字和中文混合输入，到时做出界面了在调试
 #
-# 'QIAN' 'Qian' 'qIan' 'qiAN' ben bian gua检查是不是字母，是则全转成小写
-# isalpha() 方法检测字符串是否只由字母组成，No space & digit in this string
-# lower() 方法转换字符串中所有大写字符为小写
 # 
 # 还有有一种算法，就是search函数，search 之，zhi，- 这三个关键字符
 # 关键字符之前是本卦，关键字符之后为变卦
@@ -32,7 +29,7 @@ import re
 import lookup_dic
 # from lookup_dic import to_bi
 
-instr_gua =  '1 之 2'
+instr_gua =  '乾之'
 (ben_gua, bian_gua) = ('', '')  # 可不申明
 (bin_ben_gua, bin_bian_gua) = ('', '')
 
@@ -41,8 +38,8 @@ instr_gua =  '1 之 2'
 
 def get_benbian_gua():
     global ben_gua, bian_gua
-    ben_gua = match_str.group(1)  #.rstrip()
-    bian_gua = match_str.group(2)  #.lstrip()
+    ben_gua = match_str.group(1).lower()  #.rstrip()
+    bian_gua = match_str.group(2).lower()  #.lstrip()
 
 
 def get_bin_benbian():
@@ -53,7 +50,7 @@ def get_bin_benbian():
 
 # 两个卦名必须全中文 或者 拼音和数字
 # 目前只匹配阿拉伯数字和小写拼音 #'\s*([a-zA-Z0-9]+)\s*-*[Zz][h]*i*之*\s*([a-zA-Z0-9]*)\s*'
-# '1 - 2' or '1 - ' or '1' or '11 之 1' or 'qian Zi qian' or 'qian Zhi qian'
+# '1 - 2' or '1 - ' or '1' or '11 之 1'  # zhi 不行
 match_str = re.match('\s*([a-zA-Z0-9]+)\s*[-之\s*]*\s*([a-zA-Z0-9]*)\s*', instr_gua)
 if match_str:
     get_benbian_gua()
@@ -67,6 +64,13 @@ else:
         ben_gua = instr_gua
         get_bin_benbian()
         print('to check the dic')  # 如果字典里查不到就是输入错误
+
+
+print('本卦:', ben_gua)
+print('变卦:', bian_gua)
+print(bin_ben_gua, bin_bian_gua)
+
+
 
 '''
 if re.search('不动', instr_gua) and not re.search('之', instr_gua) and not re.search('-', instr_gua):  # '乾不动'
@@ -101,10 +105,14 @@ else:
             print('to check the dic')  # 如果字典里查不到就是输入错误
         '''
 
-print('本卦:', ben_gua)
-print('变卦:', bian_gua)
-print(bin_ben_gua, bin_bian_gua)
+
 '''
+
+# 'QIAN' 'Qian' 'qIan' 'qiAN' ben bian gua检查是不是字母，是则全转成小写
+# isalpha() 方法检测字符串是否只由字母组成，No space & digit in this string
+# lower() 方法转换字符串中所有大写字符为小写
+
+
 语法
 ################################################
 #0. 乾之不动
