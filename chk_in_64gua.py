@@ -32,7 +32,7 @@ import lookup_dic
 # from lookup_dic import to_bi
 
 # instr_gua = input('输入卦名：')
-instr_gua = '1 - 2'
+instr_gua = '3 - 2'
 (ben_gua, bian_gua) = ('', '')  # 可不申明
 (bin_ben_gua, bin_bian_gua) = ('', '')
 matrix = [['  ' for col in range(13)] for row in range(6)]
@@ -90,15 +90,15 @@ def get_liuyao():
 def set_dongyao():
     for i in range(6):
         if bin_ben_gua[i] == '0' and bin_bian_gua[i] == '1':
-            matrix[i][6] = ' X'
+            matrix[i][6] = 'X'
             matrix[i][7] = '→ '
         elif bin_ben_gua[i] == '1' and bin_bian_gua[i] == '0':
-            matrix[i][6] = ' 0'
+            matrix[i][6] = '0'
             matrix[i][7] = '→ '
 
 
 def print_liuyao():
-    for x in range(5):
+    for x in range(6):
         print('\n')
         for y in range(13):
             print(matrix[x][y], end='')
