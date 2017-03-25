@@ -34,12 +34,13 @@ instr_gua = 'QIAN zhi QIAN'
 (bin_ben_gua, bin_bian_gua) = ('', '')
 
 # instr_gua = instr_gua.strip()  # 检测前删除两端的空格
+instr_gua = instr_gua.lower()
 
 
 def get_benbian_gua():
     global ben_gua, bian_gua
-    ben_gua = match_str.group(1).lower()  # .rstrip()
-    bian_gua = match_str.group(2).lower()  # .lstrip()
+    ben_gua = match_str.group(1)    # .lower()  # .rstrip()
+    bian_gua = match_str.group(2)   # .lower()  # .lstrip()
 
 
 def get_bin_benbian():
@@ -51,7 +52,8 @@ def get_bin_benbian():
 # 两个卦名必须全中文 或者 拼音和数字
 # 目前只匹配阿拉伯数字和小写拼音 #'\s*([a-zA-Z0-9]+)\s*-*[Zz][h]*i*之*\s*([a-zA-Z0-9]*)\s*'
 # '1 - 2' or '1 - ' or '1' or '11 之 1'  # zhi 不行
-match_str = re.match(r'\s*([a-zA-Z0-9]+)\s*[-之zhi\s*]*\s*([a-zA-Z0-9]*)\s*', instr_gua)
+match_str = re.match(
+    r'\s*([a-zA-Z0-9]+)\s*[-之zhi\s*]*\s*([a-zA-Z0-9]*)\s*', instr_gua)
 if match_str:
     get_benbian_gua()
     get_bin_benbian()
