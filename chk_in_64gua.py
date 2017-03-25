@@ -36,7 +36,7 @@ import lookup_dic
 
 # from lookup_dic import to_bi
 
-instr_gua =  '乾为天之坤为地'
+instr_gua =  '乾为天之'
 
 (ben_gua, bian_gua) = ('', '')  # 可不申明
 (bin_ben_gua, bin_bian_gua) = ('', '')
@@ -54,8 +54,6 @@ def get_bin_benbian():
     global bin_ben_gua, bin_bian_gua
     bin_ben_gua = lookup_dic.to_bin(ben_gua)
     bin_bian_gua = lookup_dic.to_bin(bian_gua)
-
-
 
 
 # 两个卦名必须全中文或者拼音
