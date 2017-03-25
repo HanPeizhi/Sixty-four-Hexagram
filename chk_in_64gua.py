@@ -36,7 +36,7 @@ import lookup_dic
 
 # from lookup_dic import to_bi
 
-instr_gua =  ' 乾 - 不动 '
+instr_gua =  '乾为天之坤为地'
 
 (ben_gua, bian_gua) = ('', '')  # 可不申明
 (bin_ben_gua, bin_bian_gua) = ('', '')
@@ -66,18 +66,20 @@ if match_str:
     get_benbian_gua()
     get_bin_benbian()
 else:   
-    if re.search('不动', instr_gua) and not re.search('之', instr_gua) and not re.search('-', instr_gua):  # '乾不动'
+    match_str = re.match('\s*([\u4e00-\u9fa5]+)\s*[-之\s*]\s*([\u4e00-\u9fa5]*)\s*', instr_gua)
+    if match_str:
+        get_benbian_gua()
+        get_bin_benbian()
+
+'''
+if re.search('不动', instr_gua) and not re.search('之', instr_gua) and not re.search('-', instr_gua):  # '乾不动'
         match_str = re.match('\s*(.+)\s*不动\s*(.*)\s*', instr_gua)  # if match_str:
         get_benbian_gua()
         get_bin_benbian()
     else:   #' 乾 - 不动 ' or '乾之不动' or ' 乾 之 不动 ' or '乾 坤'  or '乾为天' or '乾为天之不动'  or '乾为天 之 不动' 
-        match_str = re.match('\s*([\u4e00-\u9fa5]+)\s*[-之\s*]\s*([\u4e00-\u9fa5]*)\s*', instr_gua)
-        if match_str:
-            get_benbian_gua()
-            get_bin_benbian()
+'''
 
-
-    '''
+'''
 match_str = re.match('\s*(.+)\s*之*\s*(.*)\s*', instr_gua)       # '乾之坤'
 
 if match_str:
