@@ -56,23 +56,19 @@ def get_bin_benbian():
     bin_bian_gua = lookup_dic.to_bin(bian_gua)
 
 
-match_str = re.match('(.*)之(.*)', instr_gua)  # '乾之坤'
+match_str = re.match('(.*)之(.*)', instr_gua)       # '乾之坤'
 
 if match_str:
     get_benbian_gua()
     get_bin_benbian()
-    if ben_gua == bian_gua or bian_gua == '不动':  # '乾之不动'
+    if ben_gua == bian_gua or bian_gua == '不动':   # '乾之不动'
         bian_gua = ''
         get_bin_benbian()
-else:  # 1 - 2 or 1 - 
+else:                                               # 1 - 2 or 1 -
     match_str = re.match('\s*(\d+)\s*-*\s*(\d*)\s*', instr_gua)
     if match_str:
         get_benbian_gua()
         get_bin_benbian()
-    else:
-        
-
-
     '''
     match_str = re.match('(.*)\s+(.*)', instr_gua)  # '乾 坤'
     if match_str:
@@ -88,13 +84,10 @@ else:  # 1 - 2 or 1 -
             get_bi_benbian()
             print('to check the dic')  # 如果字典里查不到就是输入错误
         '''
+
 print('本卦:', ben_gua)
 print('变卦:', bian_gua)
 print(bin_ben_gua, bin_bian_gua)
-
-
-
-
 '''
 语法
 ################################################
