@@ -31,10 +31,12 @@ import re
 import lookup_dic
 # from lookup_dic import to_bi
 
-instr_gua = input('输入卦名：')
+# instr_gua = input('输入卦名：')
+instr_gua = '1 - 2'
 (ben_gua, bian_gua) = ('', '')  # 可不申明
 (bin_ben_gua, bin_bian_gua) = ('', '')
-
+matrix = [[' ' for col in range(12)] for row in range(6)]
+# (yao1, yao2, yao3, yao4, yao5, yao6) = ('', '', '', '', '', '')
 # instr_gua = instr_gua.strip()  # 检测前删除两端的空格
 instr_gua = instr_gua.lower()
 
@@ -51,11 +53,35 @@ def get_bin_benbian():
     bin_bian_gua = lookup_dic.to_bin(bian_gua)
 
 
+# for i in range(6):
+#        for j in range(12):
+def get_liuyao():
+    x = 0
+    for i in bin_ben_gua:
+        if i == '1':
+            for y in range(5):
+                matrix[x][y] = '▅'
+        elif i == '0':
+            for y in range(5):
+                if not y == 2:
+                    matrix[x][y] = '▅'
+                else:
+                    matrix[x][y] = '  '
+        else:
+            print('未知错误！')
+        x += 1
+
+
+def print_liuyao():
+    for x in range(5):
+        for y in range(12):
+             print(matrix[x][y], end = '')
+    print(" ")
+
 # 两个卦名必须全中文 或者 拼音和数字
 # 目前只匹配阿拉伯数字和小写拼音 #'\s*([a-zA-Z0-9]+)\s*-*[Zz][h]*i*之*\s*([a-zA-Z0-9]*)\s*'
 # '1 - 2' or '1 - ' or '1' or '11 之 1'  # zhi 不行
-match_str = re.match(
-    r'\s*([a-zA-Z0-9]+)\s*[-之zhi\s*]*\s*([a-zA-Z0-9]*)\s*', instr_gua)
+match_str = re.match(r'\s*([a-zA-Z0-9]+)\s*[-之zhi\s*]*\s*([a-zA-Z0-9]*)\s*', instr_gua)
 if match_str:
     get_benbian_gua()
     get_bin_benbian()
@@ -73,7 +99,8 @@ else:
 print('本卦:', ben_gua)
 print('变卦:', bian_gua)
 print(bin_ben_gua, bin_bian_gua)
-
+get_liuyao()
+print_liuyao()
 instr_gua = input('')
 
 '''
