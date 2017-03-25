@@ -20,7 +20,7 @@
 # 这里还有个问题，如果是数字和中文混合输入，到时做出界面了在调试
 #
 # https://regex101.com/
-# 还有有一种算法，就是search函数，search 之，zhi，- 这三个关键字符
+# 还有有一种算法，就是search函数，search 之，zhi，- 这三个关键字符, 比如 qianzhiqian
 # 关键字符之前是本卦，关键字符之后为变卦
 #
 
@@ -29,7 +29,7 @@ import re
 import lookup_dic
 # from lookup_dic import to_bi
 
-instr_gua = 'QIAN zhi QIAN'
+instr_gua = 'QIAN-QIAN'
 (ben_gua, bian_gua) = ('', '')  # 可不申明
 (bin_ben_gua, bin_bian_gua) = ('', '')
 
