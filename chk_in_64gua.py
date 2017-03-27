@@ -55,7 +55,7 @@ def get_bin_benbian():
 
 # for i in range(6):
 #        for j in range(12):
-def get_liuyao():
+def set_liuyao():
     x = 0
     for i in bin_ben_gua:
         if i == '1':
@@ -125,7 +125,7 @@ else:
 print('本卦:', ben_gua)
 print('变卦:', bian_gua)
 print(bin_ben_gua, bin_bian_gua)
-get_liuyao()
+set_liuyao()
 set_dongyao()
 print_liuyao()
 instr_gua = input('')

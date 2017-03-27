@@ -140,15 +140,29 @@ def to_bin(in＿name):  # in_name 不能同时是全局变量和函数元素
         out_binary = '000100'
         return out_binary
 
-    elif in＿name == '豫' or in＿name == '雷地豫' or in＿name == '0010000':  # 16
+    elif in＿name == '豫' or in＿name == '雷地豫' \
+            or in_name == 'yu' \
+            or in_name == '雷地' or in_name == 'leidi' \
+            or in_name == '震坤' or in_name == 'zhenkun' or in_name == 'zhengkun' \
+            or in_name == 'zenkun' or in_name == 'zengkun' \
+            or in＿name == '0010000' or in_name == '16':  # 16
         out_binary = '001000'
         return out_binary
 
-    elif in＿name == '随' or in＿name == '泽雷随' or in＿name == '011001':  # 17
+    elif in＿name == '随' or in＿name == '泽雷随'\
+            or in_name == 'sui' or in_name == 'shui' \
+            or in_name == '泽雷' or in_name == 'zelei' or in_name == 'zhelei' \
+            or in_name == '兑震' or in_name == 'duizhen' or in_name == 'duizheng' \
+            or in_name == 'duizeng' or in_name == 'duizheng' \
+            or in＿name == '011001' or in_name == '17':  # 17
         out_binary = '011001'
         return out_binary
 
-    elif in＿name == '蛊' or in＿name == '山风蛊' or in＿name == '100110':  # 18
+    elif in＿name == '蛊' or in＿name == '山风蛊'\
+            or in_name == 'gu' or in_name == 'chong' or in_name == 'cong' \
+            or in_name == '山风' or in_name == 'shanfeng' or in_name == 'shanfen'\
+            or in_name == 'sanfeng' or in_name == 'sanfen' \
+            or in＿name == '100110' or in_name == '18':  # 18
         out_binary = '100110'
         return out_binary
 
