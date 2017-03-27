@@ -67,8 +67,8 @@ def set_liuyao():
                     matrix[x][y] = '▅'
                 else:
                     matrix[x][y] = '  '
-        else:
-            print('未知错误！')
+        # else:
+        #     print('未知错误！')
         x += 1
 
     x = 0
@@ -82,8 +82,8 @@ def set_liuyao():
                     matrix[x][y] = '▅'
                 else:
                     matrix[x][y] = '  '
-        else:
-            print('未知错误！')
+        # else:
+        #     print('未知错误！')
         x += 1
 
 
