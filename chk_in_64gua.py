@@ -106,14 +106,15 @@ def set_liuyao():
 
 
 def set_dongyao():
-    if chk_bengua and chk_biangua:
-        for i in range(6):
-            if bin_ben_gua[i] == '0' and bin_bian_gua[i] == '1':
-                matrix[i][6] = 'X'
-                matrix[i][7] = '→ '
-            elif bin_ben_gua[i] == '1' and bin_bian_gua[i] == '0':
-                matrix[i][6] = '0'
-                matrix[i][7] = '→ '
+    if chk_bengua:
+        if chk_biangua:
+            for i in range(6):
+                if bin_ben_gua[i] == '0' and bin_bian_gua[i] == '1':
+                    matrix[i][6] = 'X'
+                    matrix[i][7] = '→ '
+                elif bin_ben_gua[i] == '1' and bin_bian_gua[i] == '0':
+                    matrix[i][6] = '0'
+                    matrix[i][7] = '→ '
 
 
 def print_liuyao():
