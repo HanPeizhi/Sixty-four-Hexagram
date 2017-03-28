@@ -35,8 +35,8 @@ instr_gua = input('输入卦名：')
 (ben_gua, bian_gua) = ('', '')  # 可不申明
 (bin_ben_gua, bin_bian_gua) = ('', '')
 SYS_TIME = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-global chk_bengua
-global chk_biangua
+# global chk_bengua
+# global chk_biangua
 matrix = [['  ' for col in range(13)] for row in range(6)]
 # (yao1, yao2, yao3, yao4, yao5, yao6) = ('', '', '', '', '', '')
 # instr_gua = instr_gua.strip()  # 检测前删除两端的空格
@@ -115,8 +115,8 @@ def set_dongyao():
                 elif bin_ben_gua[i] == '1' and bin_bian_gua[i] == '0':
                     matrix[i][6] = '0'
                     matrix[i][7] = '→ '
-                else: print("未知错误")
-                
+                else: 
+                    print("未知错误")
 
 def print_liuyao():
     for x in range(6):
