@@ -2,6 +2,7 @@ missing module named resource - imported by posix, E:\github\no-more-reason\no-m
 missing module named posix - imported by os, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py
 missing module named _posixsubprocess - imported by subprocess, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py
 missing module named 'org.python' - imported by pickle, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py, xml.sax
+missing module named ce - imported by os, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py
 missing module named readline - imported by cmd, code, pdb, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py
 excluded module named _frozen_importlib - imported by importlib, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py
 missing module named _winreg - imported by platform, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py
@@ -10,8 +11,7 @@ missing module named java - imported by platform, E:\github\no-more-reason\no-mo
 missing module named 'java.lang' - imported by platform, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py, xml.sax._exceptions
 missing module named vms_lib - imported by platform, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py
 missing module named termios - imported by tty, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py, getpass
-missing module named grp - imported by tarfile, shutil, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py
-missing module named pwd - imported by posixpath, tarfile, shutil, http.server, webbrowser, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py, getpass
-missing module named ce - imported by os, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py
 missing module named _dummy_threading - imported by dummy_threading, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py
+missing module named grp - imported by tarfile, shutil, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py
 missing module named org - imported by copy, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py
+missing module named pwd - imported by posixpath, tarfile, shutil, http.server, webbrowser, E:\github\no-more-reason\no-more-reason\chk_in_64gua.py, getpass

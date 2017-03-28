@@ -28,13 +28,15 @@
 
 __author__ = 'hanpeizhi'
 import re
+from datetime import datetime
 import lookup_dic
 # from lookup_dic import to_bi
 
-# instr_gua = input('输入卦名：')
-instr_gua = '3 - 2'
+instr_gua = input('输入卦名：')
+# instr_gua = '3 - 2'
 (ben_gua, bian_gua) = ('', '')  # 可不申明
 (bin_ben_gua, bin_bian_gua) = ('', '')
+SYS_TIME = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 matrix = [['  ' for col in range(13)] for row in range(6)]
 # (yao1, yao2, yao3, yao4, yao5, yao6) = ('', '', '', '', '', '')
 # instr_gua = instr_gua.strip()  # 检测前删除两端的空格
@@ -127,6 +129,7 @@ print('变卦:', bian_gua)
 print(bin_ben_gua, bin_bian_gua)
 set_liuyao()
 set_dongyao()
+print(SYS_TIME)
 print_liuyao()
 instr_gua = input('')
 
