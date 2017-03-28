@@ -264,7 +264,7 @@ def to_bin(inVar):  # inVar 不能同时是全局变量和函数元素
             or inVar == 'huo' \
             or inVar == '离' or inVar == 'li' \
             or inVar == '离离' or inVar == 'lili' \
-            or inVar == '1011011' or inVar == '30':  # 30  上经
+            or inVar == '101101' or inVar == '30':  # 30  上经
         outBin = '101101'
         return outBin
 
@@ -311,7 +311,7 @@ def to_bin(inVar):  # inVar 不能同时是全局变量和函数元素
     elif inVar == '' or inVar == '不动' \
             or inVar == 'budong' or inVar == 'don' \
             or inVar == '0':
-        outBin = ''
+        outBin = ' '
         return outBin
     else:
         return "不要调皮！"

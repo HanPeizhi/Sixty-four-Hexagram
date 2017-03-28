@@ -35,6 +35,8 @@ instr_gua = input('输入卦名：')
 (ben_gua, bian_gua) = ('', '')  # 可不申明
 (bin_ben_gua, bin_bian_gua) = ('', '')
 SYS_TIME = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+global chk_bengua
+global chk_biangua
 matrix = [['  ' for col in range(13)] for row in range(6)]
 # (yao1, yao2, yao3, yao4, yao5, yao6) = ('', '', '', '', '', '')
 # instr_gua = instr_gua.strip()  # 检测前删除两端的空格
@@ -52,49 +54,66 @@ def get_bin_benbian():
     bin_ben_gua = lookup_dic.to_bin(ben_gua)
     bin_bian_gua = lookup_dic.to_bin(bian_gua)
 
+    if bin_ben_gua != ' ':
+        global chk_bengua
+        chk_bengua = True
+    else:
+        global chk_bengua
+        chk_bengua = False
+
+    if bin_bian_gua != ' ':
+        global chk_biangua
+        chk_biangua = True
+    else:
+        global chk_biangua
+        chk_biangua = False
+
 
 # for i in range(6):
 #        for j in range(12):
 def set_liuyao():
     x = 0
-    for i in bin_ben_gua:
-        if i == '1':
-            for y in range(5):
-                matrix[x][y] = '▅'
-        elif i == '0':
-            for y in range(5):
-                if not y == 2:
+    if chk_bengua:
+        for i in bin_ben_gua:
+            if i == '1':
+                for y in range(5):
                     matrix[x][y] = '▅'
-                else:
-                    matrix[x][y] = '  '
-        # else:
-        #     print('未知错误！')
-        x += 1
+            elif i == '0':
+                for y in range(5):
+                    if not y == 2:
+                        matrix[x][y] = '▅'
+                    else:
+                        matrix[x][y] = '  '
+            # else:
+            #     print('未知错误！')
+            x += 1
 
-    x = 0
-    for i in bin_bian_gua:
-        if i == '1':
-            for y in range(8, 13):
-                matrix[x][y] = '▅'
-        elif i == '0':
-            for y in range(8, 13):
-                if not y == 10:
+    if chk_biangua:
+        x = 0
+        for i in bin_bian_gua:
+            if i == '1':
+                for y in range(8, 13):
                     matrix[x][y] = '▅'
-                else:
-                    matrix[x][y] = '  '
-        # else:
-        #     print('未知错误！')
-        x += 1
+            elif i == '0':
+                for y in range(8, 13):
+                    if not y == 10:
+                        matrix[x][y] = '▅'
+                    else:
+                        matrix[x][y] = '  '
+            # else:
+            #     print('未知错误！')
+            x += 1
 
 
 def set_dongyao():
-    for i in range(6):
-        if bin_ben_gua[i] == '0' and bin_bian_gua[i] == '1':
-            matrix[i][6] = 'X'
-            matrix[i][7] = '→ '
-        elif bin_ben_gua[i] == '1' and bin_bian_gua[i] == '0':
-            matrix[i][6] = '0'
-            matrix[i][7] = '→ '
+    if chk_bengua and chk_biangua:
+        for i in range(6):
+            if bin_ben_gua[i] == '0' and bin_bian_gua[i] == '1':
+                matrix[i][6] = 'X'
+                matrix[i][7] = '→ '
+            elif bin_ben_gua[i] == '1' and bin_bian_gua[i] == '0':
+                matrix[i][6] = '0'
+                matrix[i][7] = '→ '
 
 
 def print_liuyao():
