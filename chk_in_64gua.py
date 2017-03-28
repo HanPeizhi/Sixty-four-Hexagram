@@ -54,17 +54,17 @@ def get_bin_benbian():
     bin_ben_gua = lookup_dic.to_bin(ben_gua)
     bin_bian_gua = lookup_dic.to_bin(bian_gua)
 
-    if bin_ben_gua != ' ':
+    if bin_ben_gua != ' ':  # 如果没有查到有效的本卦
         chk_bengua = True
     else:
         chk_bengua = False
 
-    if bin_bian_gua != ' ':
+    if bin_bian_gua != ' ':  # 如果没有查到有效的变卦
         chk_biangua = True
     else:
         chk_biangua = False
 
-    if bin_ben_gua == bin_bian_gua:
+    if bin_ben_gua == bin_bian_gua:  # 如果 本卦和变卦相同，就没有变卦
         bin_bian_gua == ' '
         chk_biangua = False
 
@@ -73,7 +73,7 @@ def get_bin_benbian():
 #        for j in range(12):
 def set_liuyao():
     x = 0
-    if chk_bengua:
+    if chk_bengua:  # 设置本卦的阴阳爻
         for i in bin_ben_gua:
             if i == '1':
                 for y in range(5):
@@ -88,7 +88,7 @@ def set_liuyao():
             #     print('！')
             x += 1
 
-    if chk_biangua:
+    if chk_biangua:  # 设置变卦的阴阳爻
         x = 0
         for i in bin_bian_gua:
             if i == '1':
@@ -106,15 +106,14 @@ def set_liuyao():
 
 
 def set_dongyao():
-    if chk_bengua:
-        if chk_biangua:
-            for i in range(6):
-                if bin_ben_gua[i] == '0' and bin_bian_gua[i] == '1':
-                    matrix[i][6] = 'X'
-                    matrix[i][7] = '→ '
-                elif bin_ben_gua[i] == '1' and bin_bian_gua[i] == '0':
-                    matrix[i][6] = '0'
-                    matrix[i][7] = '→ '
+    if chk_biangua:  # 必须有有变卦的时候才能设置动爻 ' ' == False
+        for i in range(6):
+            if bin_ben_gua[i] == '0' and bin_bian_gua[i] == '1':
+                matrix[i][6] = 'X'
+                matrix[i][7] = '→ '
+            elif bin_ben_gua[i] == '1' and bin_bian_gua[i] == '0':
+                matrix[i][6] = '0'
+                matrix[i][7] = '→ '
         # else:
         #     print("!!!")
 
