@@ -115,7 +115,8 @@ def set_dongyao():
                 elif bin_ben_gua[i] == '1' and bin_bian_gua[i] == '0':
                     matrix[i][6] = '0'
                     matrix[i][7] = '→ '
-
+                else: print("未知错误")
+                
 
 def print_liuyao():
     for x in range(6):
