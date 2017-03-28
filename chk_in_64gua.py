@@ -50,22 +50,18 @@ def get_benbian_gua():
 
 
 def get_bin_benbian():
-    global bin_ben_gua, bin_bian_gua
+    global bin_ben_gua, bin_bian_gua, chk_bengua, chk_biangua
     bin_ben_gua = lookup_dic.to_bin(ben_gua)
     bin_bian_gua = lookup_dic.to_bin(bian_gua)
 
     if bin_ben_gua != ' ':
-        global chk_bengua
         chk_bengua = True
     else:
-        global chk_bengua
         chk_bengua = False
 
     if bin_bian_gua != ' ':
-        global chk_biangua
         chk_biangua = True
     else:
-        global chk_biangua
         chk_biangua = False
 
 
