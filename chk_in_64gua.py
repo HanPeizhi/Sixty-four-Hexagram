@@ -127,7 +127,8 @@ def print_liuyao():
 
 # 两个卦名必须全中文 或者 拼音和数字
 # 目前只匹配阿拉伯数字和小写拼音 #'\s*([a-zA-Z0-9]+)\s*-*[Zz][h]*i*之*\s*([a-zA-Z0-9]*)\s*'
-# '1 - 2' or '1 - ' or '1' or '11 之 1'  # zhi 不行
+# '1 - 2' or '1 - ' or '1' or '11 之 1'  
+# qianzhiqian 还不行
 match_str = re.match(r'\s*([a-zA-Z0-9]+)\s*[-之zhi\s*]*\s*([a-zA-Z0-9]*)\s*', instr_gua)
 if match_str:
     get_benbian_gua()
