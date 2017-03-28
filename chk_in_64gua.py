@@ -118,6 +118,7 @@ def set_dongyao():
                 else: 
                     print("未知错误")
 
+
 def print_liuyao():
     for x in range(6):
         print('\n')

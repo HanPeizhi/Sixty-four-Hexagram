@@ -314,7 +314,7 @@ def to_bin(inVar):  # inVar 不能同时是全局变量和函数元素
         outBin = ' '
         return outBin
     else:
-        return "不要调皮！"
+        return " "
 
 # lookup_dic(inVar)
 # print(outBin, inVar)
