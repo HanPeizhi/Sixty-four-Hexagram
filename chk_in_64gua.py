@@ -15,9 +15,7 @@
 #
 # 乾为1 坤为2， 输入 1之2 感觉不方便
 # 考虑用个符号代替之字， . 或者 -， 英文是点 中文是句号，不过减号中英相同
-#
-# 从软件界面输入得到的是数字，还得转换成字符
-# 这里还有个问题，如果是数字和中文混合输入，到时做出界面了在调试
+# 键入的都是字符
 #
 # https://regex101.com/
 # 还有有一种算法，就是search函数，search 之，zhi，- 这三个关键字符, 比如 qianzhiqian
@@ -128,10 +126,11 @@ print('本卦:', ben_gua)
 print('变卦:', bian_gua)
 print(bin_ben_gua, bin_bian_gua)
 set_liuyao()
-set_dongyao()
+set_dongyao()  # 如果输入失败，程序到这就会失败
 print(SYS_TIME)
 print_liuyao()
 instr_gua = input('')
+
 
 '''
 if re.search('不动', instr_gua) and not re.search('之', instr_gua)\
