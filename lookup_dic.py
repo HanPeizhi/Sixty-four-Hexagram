@@ -270,7 +270,42 @@ def to_bin(inVar):  # inVar 不能同时是全局变量和函数元素
 
     elif inVar == '咸' or inVar == '泽山咸' \
             or inVar == '011100' or inVar == '31':  # 31 下经
-        outBin == '011100'
+        outBin = '011100'
+        return outBin
+
+    elif inVar == '恒' or inVar == '雷风恒' \
+            or inVar == '001110' or inVar == '32':
+        outBin = '001110'
+        return outBin
+
+    elif inVar == '遁' or inVar == '遯' or inVar == '天山遁' or inVar == '天山遯'\
+            or inVar == '111100' or inVar == '33':
+        outBin = '111100'
+        return outBin
+
+    elif inVar == '大壮' or inVar == '雷天大壮' \
+            or inVar == '001111' or inVar == '34':
+        outBin = '001111'
+        return outBin
+
+    elif inVar == '晋' or inVar == '火地晋' \
+            or inVar == '101000' or inVar == '35':
+        outBin = '101000'
+        return outBin
+
+    elif inVar == '明夷' or inVar == '地火明夷' \
+            or inVar == '000101' or inVar == '36':
+        outBin = '000101'
+        return outBin
+
+    elif inVar == '家人' or inVar == '风火家人' \
+            or inVar == '110101' or inVar == '37':
+        outBin = '110101'
+        return outBin
+
+    elif inVar == '睽' or inVar == '火泽睽' \
+            or inVar == '101011' or inVar == '38':
+        outBin == '101011'
         return outBin
 
     elif inVar == '' or inVar == '不动' \
