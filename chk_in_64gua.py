@@ -64,6 +64,8 @@ def get_bin_benbian():
     else:
         chk_biangua = False
 
+    if bin_ben_gua == bin_bian_gua:
+        bin_bian_gua == ' '
 
 # for i in range(6):
 #        for j in range(12):
