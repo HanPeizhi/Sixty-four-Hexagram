@@ -268,6 +268,11 @@ def to_bin(inVar):  # inVar 不能同时是全局变量和函数元素
         outBin = '101101'
         return outBin
 
+    elif inVar == '咸' or inVar == '泽山咸' \
+            or inVar == '011100' or inVar == '31':  # 31 下经
+        # outBin == '011100'
+        return outBin == '011100'
+
     elif inVar == '' or inVar == '不动' \
             or inVar == 'budong' or inVar == 'don' \
             or inVar == '0':
