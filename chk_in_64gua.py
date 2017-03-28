@@ -85,7 +85,7 @@ def set_liuyao():
                     else:
                         matrix[x][y] = '  '
             # else:
-            #     print('未知错误！')
+            #     print('！')
             x += 1
 
     if chk_biangua:
@@ -101,7 +101,7 @@ def set_liuyao():
                     else:
                         matrix[x][y] = '  '
             # else:
-            #     print('未知错误！')
+            #     print('!！')
             x += 1
 
 
@@ -115,8 +115,9 @@ def set_dongyao():
                 elif bin_ben_gua[i] == '1' and bin_bian_gua[i] == '0':
                     matrix[i][6] = '0'
                     matrix[i][7] = '→ '
-        else:
-            print("!")
+        # else:
+        #     print("!!!")
+
 
 def print_liuyao():
     for x in range(6):
