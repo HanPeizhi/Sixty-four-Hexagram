@@ -66,6 +66,8 @@ def get_bin_benbian():
 
     if bin_ben_gua == bin_bian_gua:
         bin_bian_gua == ' '
+        chk_biangua = False
+
 
 # for i in range(6):
 #        for j in range(12):
@@ -113,9 +115,8 @@ def set_dongyao():
                 elif bin_ben_gua[i] == '1' and bin_bian_gua[i] == '0':
                     matrix[i][6] = '0'
                     matrix[i][7] = '→ '
-                else: 
-                    print("未知错误")
-
+        else:
+            print("!")
 
 def print_liuyao():
     for x in range(6):
