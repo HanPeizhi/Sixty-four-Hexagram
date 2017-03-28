@@ -106,7 +106,7 @@ def set_liuyao():
 
 
 def set_dongyao():
-    if chk_biangua:  # 必须有有变卦的时候才能设置动爻 ' ' == False
+    if chk_bengua and chk_biangua:  # 必须有有变卦的时候才能设置动爻 ' ' == False
         for i in range(6):
             if bin_ben_gua[i] == '0' and bin_bian_gua[i] == '1':
                 matrix[i][6] = 'X'
