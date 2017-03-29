@@ -314,7 +314,6 @@ def to_bin(inVar):  # inVar 不能同时是全局变量和函数元素
         return outBin
 
 
-
     elif inVar == '' or inVar == '不动' \
             or inVar == 'budong' or inVar == 'don' \
             or inVar == '0':
