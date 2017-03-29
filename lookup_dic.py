@@ -305,8 +305,15 @@ def to_bin(inVar):  # inVar 不能同时是全局变量和函数元素
 
     elif inVar == '睽' or inVar == '火泽睽' \
             or inVar == '101011' or inVar == '38':
-        outBin == '101011'
+        outBin = '101011'
         return outBin
+
+    elif inVar == '' or inVar == '' \
+            or inVar == '' or inVar == '39':
+        outBin = ''
+        return outBin
+
+
 
     elif inVar == '' or inVar == '不动' \
             or inVar == 'budong' or inVar == 'don' \

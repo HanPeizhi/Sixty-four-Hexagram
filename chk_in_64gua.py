@@ -65,7 +65,7 @@ def get_bin_benbian():
         chk_biangua = False
 
     if bin_ben_gua == bin_bian_gua:  # 如果 本卦和变卦相同，就没有变卦
-        bin_bian_gua == ' '
+        bin_bian_gua = ' '
         chk_biangua = False
 
 
