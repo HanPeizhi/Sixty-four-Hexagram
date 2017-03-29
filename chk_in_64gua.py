@@ -88,7 +88,7 @@ def set_liuyao():
             #     print('！')
             x += 1
 
-    if chk_biangua:  # 设置变卦的阴阳爻
+    if chk_bengua and chk_biangua:  # 设置变卦的阴阳爻
         x = 0
         for i in bin_bian_gua:
             if i == '1':
