@@ -33,8 +33,8 @@ import dir64gua
 
 instr_gua = input('输入卦名：')
 # instr_gua = '3 - 2'
-(ben_gua, bian_gua) = ('', '')  # 可不申明
-(bin_ben_gua, bin_bian_gua) = ('', '')
+#(ben_gua, bian_gua) = ('', '')  # 可不申明
+#(bin_ben_gua, bin_bian_gua) = ('', '')
 SYS_TIME = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 # global chk_bengua
 # global chk_biangua
@@ -51,38 +51,49 @@ def get_benbian_gua():
 
 
 def get_bin_benbian():
-    global bin_ben_gua, bin_bian_gua, chk_bengua, chk_biangua
+    global bin_ben_gua, bin_bian_gua    # chk_bengua, chk_biangua
+    global chk_bin_bengua, chk_bin_biangua
+    chk_bin_bengua = chk_bin_biangua = False
     # bin_ben_gua = lookup_dic.to_bin(ben_gua)
     # bin_bian_gua = lookup_dic.to_bin(bian_gua)
 
     for k, v in dir64gua.chk_64gua.items():
         if ben_gua in dir64gua.chk_64gua[k]:
             bin_ben_gua = k
+            chk_bin_bengua = True
+
+    if not chk_bin_bengua:  # 没有找到本卦
+        bin_ben_gua = ' '
 
     for k, v in dir64gua.chk_64gua.items():
         if bian_gua in dir64gua.chk_64gua[k]:
             bin_bian_gua = k
+            chk_bin_biangua = True
 
-    if bin_ben_gua != ' ':  # 如果没有查到有效的本卦
-        chk_bengua = True
-    else:
-        chk_bengua = False
+    if not chk_bin_biangua: # 没有找到变卦
+        bin_bian_gua = ' '
 
-    if bin_bian_gua != ' ':  # 如果没有查到有效的变卦
-        chk_biangua = True
-    else:
-        chk_biangua = False
+
+#    if bin_ben_gua != ' ':  # 如果没有查到有效的本卦
+#        chk_bengua = True
+#    else:
+#        chk_bengua = False
+#
+#    if bin_bian_gua != ' ':  # 如果没有查到有效的变卦
+#        chk_biangua = True
+#    else:
+#        chk_biangua = False
 
     if bin_ben_gua == bin_bian_gua:  # 如果 本卦和变卦相同，就没有变卦
         bin_bian_gua = ' '
-        chk_biangua = False
+        chk_bin_biangua = False
 
 
 # for i in range(6):
 #        for j in range(12):
 def set_liuyao():
     x = 0
-    if chk_bengua:  # 设置本卦的阴阳爻
+    if chk_bin_bengua:  # 设置本卦的阴阳爻
         for i in bin_ben_gua:
             if i == '1':
                 for y in range(5):
@@ -97,7 +108,7 @@ def set_liuyao():
             #     print('！')
             x += 1
 
-    if chk_bengua and chk_biangua:  # 必须有本变卦 才能设置变卦的阴阳爻
+    if chk_bin_bengua and chk_bin_biangua:  # 必须有本变卦 才能设置变卦的阴阳爻
         x = 0
         for i in bin_bian_gua:
             if i == '1':
@@ -115,14 +126,14 @@ def set_liuyao():
 
 
 def set_dongyao():
-    if chk_bengua and chk_biangua:  # 必须有本卦和变卦的时候才能设置动爻 ' ' == False
+    if chk_bin_bengua and chk_bin_biangua:  # 必须有本卦和变卦的时候才能设置动爻 ' ' == False
         for i in range(6):
             if bin_ben_gua[i] == '0' and bin_bian_gua[i] == '1':
                 matrix[i][6] = 'X'
-                matrix[i][7] = '→ '
+                matrix[i][7] = '→  '
             elif bin_ben_gua[i] == '1' and bin_bian_gua[i] == '0':
                 matrix[i][6] = '0'
-                matrix[i][7] = '→ '
+                matrix[i][7] = '→  '
         # else:
         #     print("!!!")
 
@@ -154,9 +165,12 @@ else:
 
 # main
 # if __name__ == "__main__"：
-print('本卦:', ben_gua)
-print('变卦:', bian_gua)
-print(bin_ben_gua, bin_bian_gua)
+print('输入的本卦：', ben_gua)
+print('输入的变卦：', bian_gua)
+print('本卦：', bin_ben_gua if bin_ben_gua else ' ')
+print('变卦：', bin_bian_gua if bin_bian_gua else ' ')
+print('本卦卦名：', dir64gua.chk_64gua[bin_ben_gua][1] if bin_ben_gua else ' ')
+print('变卦卦名：', dir64gua.chk_64gua[bin_bian_gua][1] if bin_bian_gua else ' ')
 set_liuyao()
 set_dongyao()  # 如果输入失败，程序到这就会失败
 print(SYS_TIME)
