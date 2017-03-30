@@ -143,7 +143,8 @@ else:
         get_bin_benbian()
         print('to check the dic')  # 如果字典里查不到就是输入错误
 
-
+# main
+# if __name__ == "__main__"：
 print('本卦:', ben_gua)
 print('变卦:', bian_gua)
 print(bin_ben_gua, bin_bian_gua)
