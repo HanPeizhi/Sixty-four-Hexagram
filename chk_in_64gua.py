@@ -28,6 +28,7 @@ __author__ = 'hanpeizhi'
 import re
 from datetime import datetime
 import lookup_dic
+import dir64gua
 # from lookup_dic import to_bi
 
 instr_gua = input('输入卦名：')
@@ -51,8 +52,16 @@ def get_benbian_gua():
 
 def get_bin_benbian():
     global bin_ben_gua, bin_bian_gua, chk_bengua, chk_biangua
-    bin_ben_gua = lookup_dic.to_bin(ben_gua)
-    bin_bian_gua = lookup_dic.to_bin(bian_gua)
+    # bin_ben_gua = lookup_dic.to_bin(ben_gua)
+    # bin_bian_gua = lookup_dic.to_bin(bian_gua)
+
+    for k, v in dir64gua.chk_64gua.items():
+        if ben_gua in dir64gua.chk_64gua[k]:
+            bin_ben_gua = k
+
+    for k, v in dir64gua.chk_64gua.items():
+        if bian_gua in dir64gua.chk_64gua[k]:
+            bin_bian_gua = k
 
     if bin_ben_gua != ' ':  # 如果没有查到有效的本卦
         chk_bengua = True
