@@ -87,7 +87,7 @@ def to_bin(inVar):  # inVar 不能同时是全局变量和函数元素
     elif inVar == '小畜' or inVar == '风天小畜' \
             or inVar == 'xiaochu' or inVar == 'xiaocu'\
             or inVar == '风天' or inVar == 'fengtian' or inVar == 'fentian' \
-            or inVar == '巽乾' or inVar == 'xunqian' \
+            or inVar == '巽乾' or inVar == 'xunqian' or inVar == 'xungqian' \
             or inVar == '110111' or inVar == '9':  # 9
         outBin = '110111'
         return outBin
@@ -162,6 +162,8 @@ def to_bin(inVar):  # inVar 不能同时是全局变量和函数元素
             or inVar == 'gu' or inVar == 'chong' or inVar == 'cong' \
             or inVar == '山风' or inVar == 'shanfeng' or inVar == 'shanfen'\
             or inVar == 'sanfeng' or inVar == 'sanfen' \
+            or inVar == '艮巽' or inVar == 'genxun' or inVar == 'genxung' \
+            or inVar == 'gengxun' or inVar == 'gengxung' \
             or inVar == '100110' or inVar == '18':  # 18
         outBin = '100110'
         return outBin
@@ -177,7 +179,7 @@ def to_bin(inVar):  # inVar 不能同时是全局变量和函数元素
     elif inVar == '观' or inVar == '风地观' \
             or inVar == 'guan' or inVar == 'guang' \
             or inVar == '风地' or inVar == 'fengdi' or inVar == 'fendi' \
-            or inVar == '巽坤' or inVar == 'xunkun' \
+            or inVar == '巽坤' or inVar == 'xunkun' or inVar == 'xungkun' \
             or inVar == '110000' or inVar == '20':  # 20
         outBin = '110000'
         return outBin
@@ -247,7 +249,7 @@ def to_bin(inVar):  # inVar 不能同时是全局变量和函数元素
             or inVar == 'daguo' \
             or inVar == '泽风' or inVar == 'zefeng' or inVar == 'zefen' \
             or inVar == 'zhefeng' or inVar == 'zhefen' \
-            or inVar == '兑巽' or inVar == 'duixun' \
+            or inVar == '兑巽' or inVar == 'duixun' or inVar == 'duixung' \
             or inVar == '011110' or inVar == '28':  # 28
         outBin = '011110'
         return outBin
@@ -269,42 +271,70 @@ def to_bin(inVar):  # inVar 不能同时是全局变量和函数元素
         return outBin
 
     elif inVar == '咸' or inVar == '泽山咸' \
+            or inVar == 'xian' or inVar == 'gan' or inVar == 'yan' \
+            or inVar == '泽山' or inVar == 'zeshan' or inVar == 'zesan' \
+            or inVar == 'zheshan' or inVar == 'zhesan' \
+            or inVar == '兑艮' or inVar == 'duigen' or inVar == 'duigeng' \
             or inVar == '011100' or inVar == '31':  # 31 下经
         outBin = '011100'
         return outBin
 
     elif inVar == '恒' or inVar == '雷风恒' \
-            or inVar == '001110' or inVar == '32':
+            or inVar == 'heng' or inVar == 'hen' \
+            or inVar == 'huan' or inVar == 'dan' \
+            or inVar == '雷风' or inVar == 'leifeng' or inVar == 'leifen' \
+            or inVar == '震巽' or inVar == 'zhenxun' or inVar == 'zhengxun' \
+            or inVar == '001110' or inVar == '32':  # 32
         outBin = '001110'
         return outBin
 
-    elif inVar == '遁' or inVar == '遯' or inVar == '天山遁' or inVar == '天山遯'\
-            or inVar == '111100' or inVar == '33':
+    elif inVar == '遁' or inVar == '遯' \
+            or inVar == '天山遁' or inVar == '天山遯'\
+            or inVar == 'dun' \
+            or inVar == '天山' or inVar == 'tianshan' or inVar == 'tiansan' \
+            or inVar == '乾艮' or inVar == 'qiangen' or inVar == 'qiangeng' \
+            or inVar == '111100' or inVar == '33':  # 33
         outBin = '111100'
         return outBin
 
     elif inVar == '大壮' or inVar == '雷天大壮' \
-            or inVar == '001111' or inVar == '34':
+            or inVar == 'dazhuang'\
+            or inVar == '雷天' or inVar == 'leitian' \
+            or inVar == '震乾' or inVar == 'zhenqian' or inVar == 'zhengqian' \
+            or inVar == 'zenqian' or inVar == 'zengqian' \
+            or inVar == '001111' or inVar == '34':  # 34
         outBin = '001111'
         return outBin
 
     elif inVar == '晋' or inVar == '火地晋' \
-            or inVar == '101000' or inVar == '35':
+            or inVar == 'jin' or inVar == 'jing' \
+            or inVar == '火地' or inVar == 'huodi' \
+            or inVar == '离坤' or inVar == 'likun' \
+            or inVar == '101000' or inVar == '35':  # 35
         outBin = '101000'
         return outBin
 
     elif inVar == '明夷' or inVar == '地火明夷' \
-            or inVar == '000101' or inVar == '36':
+            or inVar == 'mingyi' \
+            or inVar == '地火' or inVar == 'dihuo' \
+            or inVar == '坤离' or inVar == 'kunli' \
+            or inVar == '000101' or inVar == '36':  # 36
         outBin = '000101'
         return outBin
 
     elif inVar == '家人' or inVar == '风火家人' \
-            or inVar == '110101' or inVar == '37':
+            or inVar == 'jiaren' or inVar == 'jiareng' \
+            or inVar == '风火' or inVar == 'fenghuo' or inVar == 'fenhuo' \
+            or inVar == '巽离' or inVar == 'xunli' or inVar == 'xungli' \
+            or inVar == '110101' or inVar == '37':  # 37
         outBin = '110101'
         return outBin
 
     elif inVar == '睽' or inVar == '火泽睽' \
-            or inVar == '101011' or inVar == '38':
+            or inVar == 'kui' or inVar == 'gui' \
+            or inVar == '火泽' or inVar == 'huoze' or inVar == 'huozhe' \
+            or inVar == '离兑' or inVar == 'lidui' \
+            or inVar == '101011' or inVar == '38':  # 38
         outBin = '101011'
         return outBin
 
