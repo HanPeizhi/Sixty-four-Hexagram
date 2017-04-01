@@ -172,13 +172,31 @@ print('变卦：', bin_bian_gua if bin_bian_gua else ' ')
 print('本卦卦名：', dir64gua.chk_64gua[bin_ben_gua][1] if bin_ben_gua else ' ')
 print('变卦卦名：', dir64gua.chk_64gua[bin_bian_gua][1] if bin_bian_gua else ' ')
 set_liuyao()
-set_dongyao()  # 如果输入失败，程序到这就会失败
+set_dongyao()
 print(SYS_TIME)
 print_liuyao()
 instr_gua = input('')
 
 
 '''
+
+>>> s = 'zhi zhi'
+>>> t = re.search('zhi',s)
+>>> t
+<_sre.SRE_Match object; span=(0, 3), match='zhi'>
+
+>>> t.start()
+0
+>>> t.end()
+3
+
+>>> s.rfind('zhi')
+4
+
+>>> s.rindex('z')
+>>> s.rindex('zhi')
+4
+
 if re.search('不动', instr_gua) and not re.search('之', instr_gua)\
     and not re.search('-', instr_gua):  # '乾不动'
         match_str = re.match('\s*(.+)\s*不动\s*(.*)\s*',

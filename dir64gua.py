@@ -264,21 +264,53 @@ chk_64gua = {
                '离兑', 'lidui',
                '101011'],
 
-    39: [],
+    '010100': ['39', '水山蹇',
+               '蹇', 'jian', 'chu', 'cu',    #'zhi', 'zi'
+               '水山', 'shuishan', 'shuisan', 'suishan', 'suisan',
+               '坎艮', 'kangen', 'kangeng',
+               '010100'],
 
-    40: [],
+    '001010': ['40', '雷水解',
+               '解', 'jie', 'xie',
+               '雷水', 'leishui', 'leisui',
+               '震坎', 'zhenkan', 'zhengkan', 'zenkan', 'zengkan',
+               '001010'],
 
-    41: [],
+    '100011': ['41', '山泽损',
+               '损', 'sun', 'shun',
+               '山泽', 'shanze', 'shanzhe', 'sanze', 'sanzhe',
+               '艮兑', 'gendui', 'gengdui',
+               '100011'],
 
-    42: [],
+    '110001': ['42', '风雷益',
+               '益', 'yi',
+               '风雷', 'fenglei', 'fenlei',
+               '巽震', 'xunzhen', 'xunzheng', 'xunzen', 'xunzeng',
+               '110001'],
 
-    43: [],
+    '011111': ['43', '泽天夬',
+               '夬', 'guai', 'yang', 'jue',
+               '泽天', 'zetian', 'zhetian',
+               '兑乾', 'duiqian',
+               '011111'],
 
-    44: [],
+    '111110': ['44', '风天姤', '风天媾',
+               '姤', '媾', 'gou',
+               '风天', 'fengtian', 'fentian',
+               '巽乾', 'xunqian',
+               '111110'],
 
-    45: [],
+    '011000': ['45', '泽地萃',
+               '萃', 'cui', 'chui',
+               '泽地', 'zedi', 'zhedi',
+               '兑坤', 'duikun',
+               '011000'],
 
-    46: [],
+    '000110': ['46', '地风升',
+               '升', 'sheng', 'shen', 'seng', 'sen',
+               '地风', 'difeng', 'difen',
+               '坤巽', 'kunxun',
+               '000110'],
 
     47: [],
 
