@@ -18,8 +18,6 @@
 # 旅 在下经是 lV1
 #
 
-
-
 chk_64gua = {
     ' ': [' ', '不动', 'budong', 'budon', "", '', " ", ',s', '0'],
 
@@ -221,8 +219,7 @@ chk_64gua = {
                '011100'],               # 31  下经
 
     '001110': ['32', '雷风恒',
-               '恒', 'heng', 'hen',
-               'huan', 'dan',
+               '恒', 'heng', 'hen', 'dan',
                '雷风', 'leifeng', 'leifen',
                '震巽', 'zhenxun', 'zhengxun',
                '001110'],
@@ -362,7 +359,8 @@ chk_64gua = {
     '001011': ['54', '雷泽归妹',
                '归妹', 'guimei',
                '雷泽', 'leize', 'leizhe',
-               '震兑', 'zhendui', 'zhengdui', 'zendui', 'zengdui',
+               '震兑', 'zhendui', 'zhengdui',
+               'zendui', 'zengdui',
                '001011'],
 
     '001101': ['55', '雷火丰',
@@ -371,21 +369,62 @@ chk_64gua = {
                '震离', 'zhenli', 'zhengli', 'zenli', 'zengli',
                '001101'],
 
-    56: [],
+    '101100': ['56', '火山旅',
+               '旅', 'lv1',
+               '火山', 'huoshan', 'huosan', 'huoshang',
+               '离艮', 'ligen', 'ligeng',
+               '101100'],
 
-    57: [],
+    '110110': ['57', '巽为风',
+               '巽', 'xun',
+               '风', 'fen', 'feng',
+               '巽巽', 'xunxun',
+               '110110'],
 
-    58: [],
+    '011011': ['58', '兑为泽',
+               '兑', 'dui',
+               '泽', 'ze', 'zhe',
+               '兑兑', 'duidui',
+               '011011'],
 
-    59: [],
+    '110010': ['59', '风水涣',
+               '涣', 'huan', 'huang'
+               '风水', 'fengshui', 'fenshui',
+               'fengsui', 'fensui',
+               '巽坎', 'xunkan',
+               '110010'],
 
-    60: [],
+    '010011': ['60', '水泽节',
+               '节', 'jie',
+               '水泽', 'shuize', 'suize',
+               'shuizhe', 'suizhe',
+               '坎兑', 'kandui',
+               '010011'],
 
-    61: [],
+    '110011': ['61', '风泽中孚',
+               '中孚', 'zhongfu', 'zongfu',
+               '风泽', 'fengze', 'fenze',
+               'fenzhe', 'fengzhe',
+               '巽兑', 'xundui',
+               '110011'],
 
-    62: [],
+    '001100': ['62', '雷山小过',
+               '小过', 'xiaoguo',
+               '雷山', 'leishan', 'leisan',
+               '震艮', 'zhengen', 'zhengeng',
+               'zhenggen', 'zhenggeng',
+               'zengen', 'zengeng', 'zenggen', 'zenggeng',
+               '001100'],
 
-    63: [],
+    '010101': ['63', '水火既济',
+               '既济', 'jiji',
+               '水火', 'shuihuo', 'suihuo',
+               '坎离', 'kanli',
+               '010101'],
 
-    64: []
+    '101010': ['64', '火水未济',
+               '未济', 'weiji',
+               '火水', 'huoshui', 'huosui',
+               '离坎', 'likan',
+               '101010']
 }
